@@ -1,7 +1,7 @@
 import { useState } from "react";
 
 export default function NinethSection() {
-    const activeBtn = 'bg-[#e7362d] text-white pt-2 pb-2 pl-4 pr-4 rounded-md';
+    const activeBtn = 'bg-[#ed7722] text-white pt-2 pb-2 pl-4 pr-4 rounded-md text-left';
     const defaultBtn = 'bg-white text-black pt-2 pb-2 pl-4 pr-4 rounded-md text-left';
     const [state, setState] = useState(
         {
@@ -46,18 +46,18 @@ export default function NinethSection() {
         <div className="w-full flex flex-col pt-2 pb-2 md:pb-10" >
             <div className="w-[95%] md:w-[100%] md:p-2 lg:w-[75%] flex flex-col items-center self-center gap-y-10 ">
                 <h2 className="lg:text-3xl text-[#1b3761] font-semibold text-2xl text-center w-full md:w-4/5 " >The Solutions You Need, The Expertise We Deliver</h2>
-                <div className="w-full flex gap-x-10 " >
-                    <div className="w-full md:w-1/2 p-10 flex flex-col bg-slate-300 rounded-md gap-y-2 justify-center">
+                <div className="w-full flex-col md:flex md:flex-row md:gap-x-10" >
+                    <div className="w-full md:w-1/2 p-5 md:p-10 flex flex-col bg-slate-300 rounded-md gap-y-2 justify-center">
                         <>
                             {
                                 data.map((item) => (
-                                    <button key={item.id} className={defaultBtn} onClick={() => (handleClick(item))}> {item.Btnname} </button>
+                                    <button key={item.id} className={item.id == state.id ? activeBtn : defaultBtn} onClick={() => (handleClick(item))}> {item.Btnname} </button>
                                 ))
                             }
                         </>
                     </div>
-                    <div className="w-full md:w-1/2 p-2 flex flex-col items-start gap-y-3 " >
-                        <h2 className=" text-black text-2xl font-semibold mb-[-20px]" >{state.Btnname}</h2>
+                    <div className="w-full md:w-1/2 p-2 flex flex-col items-start gap-y-3 md:mt-0 mt-5" >
+                        <h2 className=" text-black text-xl md:text-2xl font-semibold mb-[-20px]" >{state.Btnname}</h2>
                         <ul>
                             <li><span className=" text-6xl leading-3 text-[#1b3761] pr-2" >.</span>{state.li1}</li>
                             <li><span className=" text-6xl leading-3 text-[#1b3761] pr-2" >.</span>{state.li2}</li>
