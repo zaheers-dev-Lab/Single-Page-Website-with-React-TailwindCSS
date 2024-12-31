@@ -3,7 +3,6 @@ import { useState } from "react"
 export default function SeventhSection() {
     const activeBtn = 'text-[#ED7722] underline ';
     const defaultBtn = 'cursor-pointer'
-    const [style,setStyle] = useState('')
     const [state, setState] = useState(
         {
             name: 'Dental',
