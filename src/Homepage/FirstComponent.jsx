@@ -1,4 +1,4 @@
-import { Navigation, Pagination, Scrollbar, A11y } from 'swiper/modules';
+import { Pagination, A11y, Autoplay } from 'swiper/modules';
 
 import { Swiper, SwiperSlide } from 'swiper/react';
 
@@ -11,12 +11,15 @@ export default function FirstComponent() {
         <div className="bg-[#EEEEEE] w-full flex flex-col items-center pt-2 pb-2 md:pt-10 md:pb-10" >
             <div className="w-[95%] md:w-[100%] md:p-2 lg:w-[75%]" >
                 <Swiper
-                    modules={[Pagination, A11y]}
+                    modules={[Pagination, A11y, Autoplay]}
                     spaceBetween={50}
                     slidesPerView={1}
                     loop={true}
+                    autoplay={{
+                        delay:3000,
+                        disableOnInteraction:false
+                    }}
                     pagination={{ clickable: true }}
-                    // onSwiper={(swiper) => console.log(swiper)}
                 >
                     <SwiperSlide>
                         <div className='flex gap-x-5 flex-col md:flex-row' >
@@ -57,7 +60,6 @@ export default function FirstComponent() {
                             </div>
                         </div>
                     </SwiperSlide>
-                    
                 </Swiper>
             </div>
             <div className='className="w-[95%] md:w-[100%] md:p-2 lg:w-[75%] mt-4 flex justify-center' >
