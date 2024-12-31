@@ -1,8 +1,8 @@
 import { useState } from "react"
 
 export default function SeventhSection() {
-    const activeBtn = 'text-[#ED7722] underline ';
-    const defaultBtn = 'cursor-pointer'
+    const activeBtn = 'text-[#ED7722] underline font-semibold ';
+    const defaultBtn = 'cursor-pointer font-semibold'
     const [state, setState] = useState(
         {
             name: 'Dental',
@@ -91,7 +91,7 @@ export default function SeventhSection() {
         <div className="w-full flex flex-col pt-2 pb-2 md:pb-10" >
             <div className="w-[95%] md:w-[100%] md:p-2 lg:w-[75%] flex flex-col items-center self-center gap-y-3 ">
                 <h2 className="lg:text-3xl text-[#1b3761] font-semibold text-2xl text-center w-full md:w-4/5 " >Medical Specialties We Specifically Serve + More</h2>
-                <div className="flex gap-x-5 " >
+                <div className="flex gap-x-5 mt-4" >
                     {
                         data.map((item) => (
                             <p  className={item.id == state.id ? activeBtn : defaultBtn  }  key={item.id} onClick={() => (handleClick(item))} > {item.name} </p>
