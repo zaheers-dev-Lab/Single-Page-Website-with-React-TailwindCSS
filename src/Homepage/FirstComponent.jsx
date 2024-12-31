@@ -16,7 +16,7 @@ export default function FirstComponent() {
                     slidesPerView={1}
                     loop={true}
                     pagination={{ clickable: true }}
-                    onSwiper={(swiper) => console.log(swiper)}
+                    // onSwiper={(swiper) => console.log(swiper)}
                 >
                     <SwiperSlide>
                         <div className='flex gap-x-5 flex-col md:flex-row' >
